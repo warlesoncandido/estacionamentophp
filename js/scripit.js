@@ -1,3 +1,5 @@
+
+
 function cadastrar(){
     event.preventDefault();
     var form = document.createElement('form');
@@ -132,3 +134,7 @@ function esqueciSenha(){
 }
 
 document.getElementById('esqueci').addEventListener("click",esqueciSenha);
+
+
+
+

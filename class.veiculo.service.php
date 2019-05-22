@@ -23,9 +23,28 @@
 
 
         }
-        public function saidaVeiculo(){
+        public function recuperarVeiculo(){
+            $query = 'select * from veiculos';
+            $stmt= $this->conexao->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
 
             
+        }
+        public function remover(){
+            $query = 'delete from veiculos where id = :id';
+            $stmt= $this->conexao->prepare($query);
+            $stmt->bindValue(':id',$_GET['id']);
+            $stmt->execute();
+            
+        }
+        public function addValores(){
+            $query = 'insert into valor(data,valor)values(:data,:valor)';
+            $stmt= $this->conexao->prepare($query);
+            $stmt->bindValue(':data',$_GET['data']);
+            $stmt->bindValue(':valor',$_GET['valor']);
+            $stmt->execute();
+
         }
 
 

@@ -65,4 +65,19 @@
         header('location:estacionamento.php');
      }
 
+         $veiculo = new Veiculo();
+         $conexao = new Conexao();
+         $veiculoService= new VeiculoService($conexao , $veiculo);
+         $veiculos=$veiculoService->recuperarVeiculo();
+
+    if(isset($_GET['id'])){
+        $veiculo = new Veiculo();
+        $conexao = new Conexao();
+        $veiculoService= new VeiculoService($conexao , $veiculo);
+        $veiculos=$veiculoService->remover();
+        
+        print_r($_GET);
+    }
+     
+
 ?>
