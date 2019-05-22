@@ -1,0 +1,28 @@
+.navbar{
+    height: 50px;
+    margin-bottom: 50px;
+}
+.formLogin{
+    
+    margin: 0 auto;
+    padding: 10px;
+    justify-content: center;
+    width: 400px;
+    min-height: 300px;
+    
+    
+}
+.formLogin label{
+    color:white;
+}
+body{
+    background: #33313b;
+}
+#formCad{
+    margin-top: 20px;
+}
+
+.listaVeiculos{
+    overflow-y:scroll;
+    min-height: 300px;
+}
